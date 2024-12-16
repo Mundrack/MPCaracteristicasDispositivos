@@ -31,9 +31,14 @@
 
         }
 
-        private void GetPhoto(object sender, EventArgs e)
+        public async void GetPhoto(object sender, EventArgs e)
         {
+            var photo = await MediaPicker.CapturePhotoAsync();
+            if (photo != null)
+            {
+                PhotoImage.Source = ImageSource.FromStream(() => photo.OpenReadAsync().Result);
 
+            }
         }
     }
 
