@@ -9,16 +9,16 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        public void GetDeviceInfo(object sender, EventArgs e)
         {
-            count++;
+            InfoDevice.Text = $"Fabricante: {DeviceInfo.Manufacturer} \n Modelo : {DeviceInfo.Model}\n Plataforma: {DeviceInfo.Platform}";
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private void OnVibrateClicked(object sender, EventArgs e)
+        {
+            Vibration.Vibrate();
+
         }
     }
 
