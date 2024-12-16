@@ -11,6 +11,12 @@
 
             <Button Text="Vibrar" Clicked="OnVibrateClicked" />
 
+            <Button Text="Bateria" Clicked="GetBateriInfo" />
+            <Label x:Name="InfoBatery"/>
+
+            <Button Text="Tomar Foto" Clicked="GetPhoto" />
+            <Image x:Name="PhotoImage"/>
+
         </VerticalStackLayout>
     </ScrollView>
 
